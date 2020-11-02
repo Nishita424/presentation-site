@@ -1,73 +1,96 @@
-:root{
-    --page-1-color: green;
-    --page-2-color: white;
-    --page-3-color: orange;
-    --page-4-color: black;
-    
-    --animate-speed: 1s;
+:root {
+  --page-1-color: orange;
+  --page-2-color: white;
+  --page-3-color: green;
+  --page-4-color: rgb(13, 13, 87);
+
+  --animate-speed: 2s;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.4;
-    color: white;
-    margin: 0;
-    padding: 0;
-    
-    /* For no scrollbars  */
-    overflow: hidden;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  color: white;
+  margin: 0;
+  padding: 0;
+
+  /* For no scrollbars  */
+  overflow: hidden;
 }
 
 /* Page Colors  */
-#page-1{
-    background: var(--page-1-color);
+#page-1 {
+  background: var(--page-1-color);
 }
-#page-2{
-    background: var(--page-2-color);
-    color: black;
+#page-2 {
+  background: var(--page-2-color);
+  color: black;
 }
-#page-3{
-    background: var(--page-3-color);
+#page-3 {
+  background: var(--page-3-color);
 }
-#page-4{
-    background: var(--page-4-color);
-}
-
-.page{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 4rem;
+#page-4 {
+  background: var(--page-4-color);
 }
 
-.page h1{
-    font-size: 4rem;
-    line-height: 1.2;
-    margin: 1rem;
-}
-.page p{
-    font-size: 1.3rem;
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
 }
 
-.btn{
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: #f4f4f4;
-    color: #333;
-    text-decoration: none;
-    border: none;
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    transition: all 0.3s ease-in;
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
 }
-.btn:hover, .btn-dark{
-    background: #333;
-    color: #fff;
+.page p {
+  font-size: 1.3rem;
 }
-.btn-dark:hover{
-    background: #f4f4f4;
-    color: #333;
+
+/* Buttons  */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in;
+}
+.btn:hover,
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+.btn-dark:hover {
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Page Animation  */
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animate-speed) forwards ease-in;
+}
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+#page-1 p {
+  transform: translateX(-1200px);
+  animation: paragraph var(--animate-speed) forwards ease-in 1s;
+}
+@keyframes paragraph {
+  to {
+    transform: translateX(0);
+  }
 }
