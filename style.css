@@ -88,10 +88,12 @@ body {
 }
 
 #page-1 p {
-  transform: translateX(-3000px);
   animation: paragraph var(--animate-speed) forwards ease-in 1s;
 }
 @keyframes paragraph {
+  from{
+    transform: translateX(-3000px);
+  }
   to {
     transform: translateX(0);
   }
