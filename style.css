@@ -76,10 +76,12 @@ body {
 
 /* Page Animation  */
 #page-1 h1 {
-  transform: translateY(-1200px);
   animation: heading var(--animate-speed) forwards ease-in;
 }
 @keyframes heading {
+  from {
+    transform: translateY(-1200px);
+  }
   to {
     transform: translateY(0);
   }
